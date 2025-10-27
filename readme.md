@@ -103,8 +103,6 @@ EOF
 patch -p0 < fixed_makefile.patch
 ```
 
-Этот патч включает все необходимые таргеты:
-
 ## Основные тестовые группы
 
 - `make check` / `make check-all` - все тесты
