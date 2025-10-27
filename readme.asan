@@ -9,7 +9,7 @@
 1) Снчала применим патч, для упрощения работы с таргетами
 1. Срздадим патч в корне DocumentDB
 ```
-cat > complete_fix.patch << 'EOF'
+cat > fixed_makefile.patch << 'EOF'
 --- Makefile
 +++ Makefile
 @@ -10,6 +10,52 @@
@@ -40,7 +40,7 @@ cat > complete_fix.patch << 'EOF'
 +# Core minimal tests
 +check-core-minimal:
 +	@echo "=== Running DocumentDB Core MINIMAL tests ==="
-+	$(MAKE) -C pg_documentdb_core check-bson-minimal
++	$(MAKE) -C pg_documentdb_core check-minimal
 +
 +# Main DocumentDB tests
 +check-main:
@@ -92,12 +92,11 @@ cat > complete_fix.patch << 'EOF'
 +check-quick: check-no-distributed
 +	@echo "=== QUICK TESTS COMPLETED ==="
 EOF
-
 ```
 
 2. Применим этот патч
 ```
-patch -p0 < complete_fix.patch
+patch -p0 < fixed_makefile.patch
 ```
 
 Этот патч включает все необходимые таргеты:
