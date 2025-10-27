@@ -104,7 +104,7 @@ patch -p0 < fixed_makefile.patch
 ```
 
 ### 2. Запускаем нужный таргет
-## Основные тестовые группы
+#### Основные тестовые группы
 
 - `make check` / `make check-all` - все тесты
 - `make check-core` - тесты ядра
@@ -112,13 +112,13 @@ patch -p0 < fixed_makefile.patch
 - `make check-rum` - RUM тесты
 - `make check-distributed` - распределенные тесты
 
-## Минимальные тесты
+#### Минимальные тесты
 
 - `make check-core-minimal` - минимальные тесты ядра
 - `make check-main-minimal` - минимальные основные тесты
 - `make check-distributed-minimal` - минимальные распределенные тесты
 
-## Быстрые тесты
+#### Быстрые тесты
 
 - `make check-quick` - быстрые тесты (без распределенных)
 
