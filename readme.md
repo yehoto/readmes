@@ -9,7 +9,7 @@
 
 ### 1. Применение патча для упрощения работы с таргетами
 
-Создадим патч в корне DocumentDB:
+1) Создадим патч в корне DocumentDB:
 
 ```bash
 cat > fixed_makefile.patch << 'EOF'
@@ -97,12 +97,13 @@ cat > fixed_makefile.patch << 'EOF'
 EOF
 ```
 
-### 2. Применение патча
+2) Примененим патч:
 
 ```bash
 patch -p0 < fixed_makefile.patch
 ```
 
+### 2. Запускаем нужный таргет
 ## Основные тестовые группы
 
 - `make check` / `make check-all` - все тесты
